@@ -1,0 +1,34 @@
+---
+
+---
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{Astro.url}</title>
+        <style>
+            body {
+                line-height: 1.4;
+                font-size: 16px;
+                padding: 0 10px;
+                margin: 50px auto;
+                max-width: 650px;
+            }
+
+            #maincontent {
+                max-width: 42em;
+                margin: 15 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="maincontent" style="margin-top:70px">
+            <a href="/">home</a>
+            <a href="/posts">posts</a>
+            <slot />
+        </div>
+    </body>
+</html>

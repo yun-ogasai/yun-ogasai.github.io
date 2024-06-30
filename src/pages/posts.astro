@@ -1,0 +1,8 @@
+---
+import Baselayout from "../layouts/Baselayout.astro"
+const allPosts = await Astro.glob('./posts/*.md');
+---
+
+<Baselayout>
+ {allPosts.map((post) =><p><a href={post.url}>{post.frontmatter.title}</a></p>)}
+</Baselayout>
