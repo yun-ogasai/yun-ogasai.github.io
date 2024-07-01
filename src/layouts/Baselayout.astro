@@ -1,7 +1,8 @@
 ---
 import { ViewTransitions } from "astro:transitions";
-
+const {title }= Astro.props.frontmatter||Astro.props;
 import "../styles/global.css";
+
 ---
 
 <html lang="en">
@@ -32,10 +33,12 @@ import "../styles/global.css";
             <a href="/">home</a>
             <a href="/posts">posts</a>
             <a href="/tags">tags</a>
+            <h2>{title || ""}</h2>
             <slot />
             <footer>
-                power by <a href="https://astro.build" target="_blank">astro</a>
+                power by <a href="https://astro.build" target="_blank">astro.</a>
             </footer>
+            
         </div>
     </body>
 </html>
