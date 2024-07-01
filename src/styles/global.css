@@ -3,5 +3,7 @@ a {
     color: rgb(12, 214, 190);
 }
 
-
-
+button {
+    border: 0px;
+    color:rgb(26, 26, 182);
+}

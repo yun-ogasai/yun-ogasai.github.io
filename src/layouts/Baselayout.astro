@@ -1,4 +1,5 @@
 ---
+import  Counter  from ".././compontents/Counter";
 import { ViewTransitions } from "astro:transitions";
 const {title }= Astro.props.frontmatter||Astro.props;
 import "../styles/global.css";
@@ -35,6 +36,8 @@ import "../styles/global.css";
             <a href="/tags">tags</a>
             <h2>{title || ""}</h2>
             <slot />
+
+            <p>cheer me up , please click +</p><Counter client:load/>
             <footer>
                 power by <a href="https://astro.build" target="_blank">astro.</a>
             </footer>
