@@ -1,5 +1,7 @@
 ---
+import { ViewTransitions } from "astro:transitions";
 
+import "../styles/global.css";
 ---
 
 <html lang="en">
@@ -9,6 +11,7 @@
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{Astro.url}</title>
+        <ViewTransitions />
         <style>
             body {
                 line-height: 1.4;
@@ -28,7 +31,11 @@
         <div id="maincontent" style="margin-top:70px">
             <a href="/">home</a>
             <a href="/posts">posts</a>
+            <a href="/tags">tags</a>
             <slot />
+            <footer>
+                power by <a href="https://astro.build" target="_blank">astro</a>
+            </footer>
         </div>
     </body>
 </html>
