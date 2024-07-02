@@ -1,5 +1,5 @@
 ---
-
+import ThemeIcon from "@components/ThemeIcon.astro";
 import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props.frontmatter || Astro.props;
 import "../styles/global.css";
@@ -17,26 +17,24 @@ import "../styles/global.css";
             body {
                 line-height: 1.4;
                 font-size: 16px;
-                padding: 0 10px;
-                margin: 50px auto;
+                padding: 0px;
+                margin: 150px auto;
                 max-width: 650px;
-            }
-
-            #maincontent {
-                max-width: 42em;
-                margin: 15 auto;
             }
         </style>
     </head>
     <body>
-        <div id="maincontent" style="margin-top:70px">
+        <div style=" position: fixed; top: 0;right: 0;"><ThemeIcon /></div>
+        <div style="max-width: 42em; margin: 15 auto;" style="margin-top:70px">
             <a href="/">home</a>
             <a href="/posts">posts</a>
             <a href="/tags">tags</a>
             <h2>{title || ""}</h2>
             <slot />
             <div>
-                &copy; {new Date().getUTCFullYear()} power by <a href="https://astro.build" target="_blank">astro.</a>
+                &copy; {new Date().getUTCFullYear()} Power by yunogasai. 
+                Built with <a href="https://astro.build" target="_blank">astro.</a>
+                All rights reserved.
             </div>
         </div>
     </body>

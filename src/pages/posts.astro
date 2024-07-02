@@ -1,8 +1,9 @@
 ---
-import Baselayout from "../layouts/Baselayout.astro"
-const allPosts = await Astro.glob('./posts/*.md');
+import { getCollection } from "astro:content";
+import Baselayout from "@layouts/BaseLayout.astro"
+const allPosts = await getCollection("posts");
 ---
 
 <Baselayout>
- {allPosts.map((post) =><p><a href={post.url}>{post.frontmatter.title}</a></p>)}
+ {allPosts.map((post) =>(<p><a href={`/posts/${post.slug}/`}>{post.data.title}</a></p>))}
 </Baselayout>

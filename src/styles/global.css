@@ -12,3 +12,6 @@ button {
     border: 0px;
     color:rgb(26, 26, 182);
 }
+html.dark {
+  background-color: #333;
+}
