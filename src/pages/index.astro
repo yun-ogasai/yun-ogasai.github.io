@@ -1,4 +1,6 @@
 ---
+import Counter from ".././compontents/Counter";
+import CurrentTime from ".././compontents/CurrentTime";
 import Baselayout from "../layouts/Baselayout.astro";
 import "../styles/global.css";
 import Stopwatch from "../compontents/Stopwatch";
@@ -6,7 +8,13 @@ import Stopwatch from "../compontents/Stopwatch";
 
 <Baselayout>
     <h2>👋 I'm yunogasai</h2>
-    <p>I am learning <a target="blank" href="https://www.rust-lang.org/">rust</a> 
-    programming.</p>
+    <p>I am learning <a target="blank" href="https://www.rust-lang.org/">rust</a> programming.</p>
+    <div>
+        <p>todolist:</p>
+        <p>1.make a vscode plugin.(0.001%)</p>
+        <p>2.write a novel.(0.000%)</p>
+    </div>
     <Stopwatch client:load />
+    <Counter client:load />
+    <CurrentTime client:load/>
 </Baselayout>

@@ -1,6 +1,5 @@
 ---
-import Counter from ".././compontents/Counter";
-import CurrentTime from ".././compontents/CurrentTime";
+
 import { ViewTransitions } from "astro:transitions";
 const { title } = Astro.props.frontmatter || Astro.props;
 import "../styles/global.css";
@@ -36,13 +35,9 @@ import "../styles/global.css";
             <a href="/tags">tags</a>
             <h2>{title || ""}</h2>
             <slot />
-            <div style={{ display: "inline-block" }}>
-                cheer me up , please click +
-            </div><Counter client:load />
-                <CurrentTime client:load></CurrentTime>
-            <footer>
-                power by <a href="https://astro.build" target="_blank">astro.</a>
-            </footer>
+            <div>
+                &copy; {new Date().getUTCFullYear()} power by <a href="https://astro.build" target="_blank">astro.</a>
+            </div>
         </div>
     </body>
 </html>
