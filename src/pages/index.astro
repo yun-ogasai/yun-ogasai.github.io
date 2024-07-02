@@ -1,7 +1,12 @@
 ---
 import Baselayout from "../layouts/Baselayout.astro";
+import "../styles/global.css";
+import Stopwatch from "../compontents/Stopwatch";
 ---
+
 <Baselayout>
-<h2>👋 I'm yunogasai</h2>
-<p>I am learning <a  target="blank" href="https://www.rust-lang.org/">rust</a> programming.</p>
+    <h2>👋 I'm yunogasai</h2>
+    <p>I am learning <a target="blank" href="https://www.rust-lang.org/">rust</a> 
+    programming.</p>
+    <Stopwatch client:load />
 </Baselayout>
