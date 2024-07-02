@@ -1,1 +1,1 @@
-yunogasai
+build with [astro](https://astro.build).
