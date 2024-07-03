@@ -1,5 +1,5 @@
 import { z, defineCollection } from 'astro:content';
-
+import { rssSchema } from '@astrojs/rss';
 const postsCollection = defineCollection({
   type: 'content',
     schema: z.object({
@@ -7,7 +7,9 @@ const postsCollection = defineCollection({
     tags: z.array(z.string()),
   }),
 });
-
+const post = defineCollection({
+  schema: rssSchema,
+});
 export const collections = {
-  'posts': postsCollection,
+  'posts': postsCollection,post
 };
