@@ -28,13 +28,19 @@ jobs:
           node-version: '22.2.0'
           cache: 'pnpm'
 
+      - name: List project structure
+        run: |
+          echo "Project structure:"
+          ls -R src
+
       - name: Install dependencies
         run: pnpm install
 
-      - name: Clean Astro cache
-        run: |
-          pnpm astro clean
-          rm -rf .astro
+      - name: Clean project
+        run: pnpm run clean
+
+      - name: Check Astro config
+        run: pnpm astro info
 
       - name: Build
         run: pnpm run build
