@@ -12,12 +12,11 @@ const CurrentTime = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [timeZone, setTimeZone] = useState('');
   const [timeZoneOffset, setTimeZoneOffset] = useState('');
-
   useEffect(() => {
     setTimeZone(Intl.DateTimeFormat().resolvedOptions().timeZone);
     setTimeZoneOffset(getTimeZoneOffset());
-  }, []);
-
+    
+  });
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -25,7 +24,7 @@ const CurrentTime = () => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  });
 
   return (
     <div>
