@@ -12,32 +12,21 @@ permissions:
 
 jobs:
   build:
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      
-      - uses: pnpm/action-setup@v2
-        with:
-          version: latest
-      
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '22.2.0'
-          cache: 'pnpm'
-      
-      - run: pnpm install
-      
-      - run: pnpm run build
-      
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./dist
+      - name: Checkout your repository using git
+        uses: actions/checkout@v4
+
+      - name: Install, build, and upload your site
+        uses: withastro/action@v2
 
   deploy:
     needs: build
-    runs-on: debian-latest
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
