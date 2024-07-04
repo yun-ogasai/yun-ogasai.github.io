@@ -12,51 +12,32 @@ permissions:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
     steps:
-      - name: Checkout your repository using git
-        uses: actions/checkout@v4
-
-      - name: Install pnpm
-        uses: pnpm/action-setup@v2
+      - uses: actions/checkout@v4
+      
+      - uses: pnpm/action-setup@v2
         with:
           version: latest
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      
+      - uses: actions/setup-node@v4
         with:
           node-version: '22.2.0'
           cache: 'pnpm'
-
-      - name: List project structure
-        run: |
-          echo "Project structure:"
-          ls -R src
-
-      - name: Install dependencies
-        run: pnpm install
-
-      - name: Clean project
-        run: pnpm run clean
-
-      - name: Check Astro config
-        run: pnpm astro info
-
-      - name: Build
-        run: pnpm run build
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      
+      - run: pnpm install
+      
+      - run: pnpm run build
+      
+      - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
 
   deploy:
     needs: build
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - uses: actions/deploy-pages@v4
