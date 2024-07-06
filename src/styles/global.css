@@ -1,18 +1,21 @@
-html{
+html {
     background-color: rgb(240, 238, 229);
 }
 
 a {
     text-decoration: none;
-    color: rgb(12, 214, 190);
+    color: rgb(179, 139, 13);
+    font-weight: bold;
+
 }
 
 button {
     margin: 5px;
     border: 0px;
     padding: 0px;
-    color:rgb(26, 26, 182);
+    color: rgb(11, 10, 10);
+    font-weight: bold;
 }
 html.dark {
-  background-color: #333;
+    background-color: #232323;
 }

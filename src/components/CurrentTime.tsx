@@ -5,9 +5,7 @@ const getTimeZoneOffset = () => {
     const sign = offset <= 0 ? "+" : "-";
     const hours = Math.floor(Math.abs(offset) / 60);
     const minutes = Math.abs(offset) % 60;
-    return `UTC${sign}${hours.toString().padStart(2, "0")}:${minutes
-        .toString()
-        .padStart(2, "0")}`;
+    return `UTC${sign}${hours.toString().padStart(2, "0")}:${minutes.toString().padStart(2, "0")}`;
 };
 
 const CurrentTime = () => {
