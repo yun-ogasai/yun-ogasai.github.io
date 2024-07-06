@@ -10,7 +10,12 @@ import "@styles/global.css";
     <head>
         <meta charset="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/favicon.jpg" />
-        <link rel="alternate" type="application/rss+xml"title="yunogasai"href={new URL("rss.xml", Astro.site)}/>
+        <link
+            rel="alternate"
+            type="application/rss+xml"
+            title="yunogasai"
+            href={new URL("rss.xml", Astro.site)}
+        />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{Astro.url}</title>
@@ -26,18 +31,21 @@ import "@styles/global.css";
         </style>
     </head>
     <body>
-        <div style=" position: fixed; top: 0;right: 0;"><ThemeIcon /></div>
+        <div style="position: absolute; top: 0; right: 0;">
+            <ThemeIcon />
+        </div>
         <div style="max-width: 42em; margin: 15 auto;" style="margin-top:70px">
             <a href="/">home</a>
             <a href="/posts">posts</a>
             <a href="/tags">tags</a>
             <h2>{title || ""}</h2>
             <slot />
-            <CurrentTime client:load/>
+            <CurrentTime client:load />
             <div>
-                &copy; {new Date().getUTCFullYear()} yunogasai. 
-                All rights reserved.
-                Built with <a href="https://astro.build" target="_blank">astro</a>.
+                &copy; {new Date().getUTCFullYear()} yunogasai. All rights reserved.
+                Built with <a href="https://astro.build" target="_blank"
+                    >astro</a
+                >.
             </div>
         </div>
     </body>

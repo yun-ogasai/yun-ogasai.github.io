@@ -1,23 +1,24 @@
 ---
-import {  } from "astro";
+import {} from "astro";
 ---
-<!DOCTYPE html>
+
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body style="margin:0px">
-<!-- <iframe src="" width="400px" height="400px"></iframe> -->
-    <form>
-    fruits:
-      <select name="fruits" style="border: 0px;">
-        <option value="english">en</option>
-        <option value="japan">ja</option>
-      </select>
-      <input type="submit" value="Submit" />
-    </form>
-    <p class:list={["hello",{"test":true},['hshsh','asaddas']]}></p>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body style="margin:0px">
+        <!-- <iframe src="" width="400px" height="400px"></iframe> -->
+        <form>
+            fruits:
+            <select name="fruits" style="border: 0px;">
+                <option value="english">en</option>
+                <option value="japan">ja</option>
+            </select>
+            <input type="submit" value="Submit" />
+        </form>
+        <p class:list={["hello", { test: true }, ["hshsh", "asaddas"]]}></p>
+    </body>
 </html>
