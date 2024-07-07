@@ -3,7 +3,9 @@ title: about Rust
 tags: ["rust"]
 ---
 this website you might go. [rust-lang](https://www.rust-lang.org/)
+
 this may be useful for you. [blog-rust](https://github.com/pretzelhammer/rust-blog)
+[cheats-for-rust](https://cheats.rs/)
 
 some lib in rust I love:
 
