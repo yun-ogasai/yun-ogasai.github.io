@@ -2,7 +2,7 @@
 import CurrentTime from "@components/CurrentTime";
 import ThemeIcon from "@components/ThemeIcon.astro";
 import { ViewTransitions } from "astro:transitions";
-const { title } = Astro.props.frontmatter || Astro.props;
+const { title } = Astro.props['frontmatter'] || Astro.props;
 import "@styles/global.css";
 ---
 
