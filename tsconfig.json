@@ -1,6 +1,7 @@
 {
   "extends": "astro/tsconfigs/strict",
   "compilerOptions": {
+<<<<<<< HEAD
     "lib": [
       "ESNext",
       "DOM"
@@ -9,6 +10,12 @@
     "module": "ESNext",
     "moduleDetection": "force",
     "jsx": "react-jsx",
+=======
+    "lib": ["ESNext", "DOM"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleDetection": "force",
+>>>>>>> 86a061e4e0847b13fa4a723282c1e1f87ce3d460
     "allowJs": true,
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,
