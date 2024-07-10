@@ -1,2 +1,10 @@
 [install.lockfile]
 print = "yarn"
+
+[test]
+
+[run]
+shell = "bun"
+
+[run]
+bun = true
