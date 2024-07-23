@@ -9,3 +9,4 @@ I love this
 ```typescript
 Object.getOwnPropertyNames(Array.prototype)
 ```
+![fetch](../../assets/images/fetch.jpg)

@@ -2,6 +2,7 @@
 title: about Rust
 tags: ["rust"]
 ---
+
 this website you might go. [rust-lang](https://www.rust-lang.org/)
 
 this may be useful for you. [blog-rust](https://github.com/pretzelhammer/rust-blog)
@@ -17,3 +18,4 @@ some exe in rust I use:
 -   [tokei](https://github.com/XAMPPRocky/tokei)
 -   [typst](https://github.com/typst/typst)
 -   [onefetch](https://github.com/o2sh/onefetch)
+-   [bottom](https://github.com/ClementTsang/bottom)
